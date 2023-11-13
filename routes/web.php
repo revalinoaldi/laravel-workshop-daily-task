@@ -18,13 +18,17 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function(){
-    return ("Ini adalah page home");
-});
+    return view('pages.home', ['mainTitle' => 'Home Pages']);
+})->name('home');
 
 Route::get('/daily', function(){
-    return ("Ini adalah page Daily");
-});
+    return view('pages.daily', ['mainTitle' => 'Daily Pages']);
+})->name('daily');
+
+Route::get('/form-daily', function(){
+    return view('pages.form-daily', ['mainTitle' => 'Form Daily Pages']);
+})->name('form-daily');
 
 Route::get('/task', function(){
     return ("Ini adalah page Task");
-});
+})->name('task');
